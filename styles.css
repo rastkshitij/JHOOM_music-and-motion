@@ -1,0 +1,191 @@
+/* General Styles */
+body {
+    margin: 0;
+    padding: 0;
+    background-color: black;
+    color: white;
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+}
+/* 🎵 Stylish Header at the Top */
+.jhoom-header {
+    background: linear-gradient(45deg, #ff007f, #ffcc00);
+    padding: 10px;
+    color: white;
+    font-size: 15px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.4);
+    border-bottom: 4px solid #ff007f;
+    position: fixed;
+    width: 100%;
+    height: 90px;
+    top: 2px;
+    left: 0;
+    z-index: 1000;
+    text-align: center;
+    font-family: 'Audiowide', sans-serif;
+    animation: glowing 1.5s infinite alternate; /* Glow effect */
+}
+
+/* ✨ Glowing Animation Effect */
+@keyframes glowing {
+    0% { box-shadow: 0px 0px 10px #ff007f; }
+    100% { box-shadow: 0px 0px 20px #ffcc00; }
+}
+
+/* 🎚️ Moving Equalizer Effect */
+.equalizer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    margin-top: 10px;
+}
+
+.equalizer div {
+    width: 6px;
+    height: 20px;
+    background: white;
+    animation: equalizer 1.2s infinite ease-in-out;
+}
+
+/* 🎵 Create Equalizer Bar Animation */
+@keyframes equalizer {
+    0%, 100% { height: 15px; }
+    50% { height: 30px; }
+}
+
+.equalizer div:nth-child(1) { animation-delay: 0s; }
+.equalizer div:nth-child(2) { animation-delay: 0.2s; }
+.equalizer div:nth-child(3) { animation-delay: 0.4s; }
+.equalizer div:nth-child(4) { animation-delay: 0.6s; }
+.equalizer div:nth-child(5) { animation-delay: 0.8s; }
+
+/* Adjust Content to Avoid Overlap */
+.container {
+    margin-top: 100px; /* Pushes content down to avoid header overlap */
+}
+
+/* Adjust Content to Avoid Overlap */
+.container {
+    margin-top: 80px; /* Pushes content down to avoid header overlap */
+}
+
+/* Main Container */
+.container {
+    display: flex;
+    width: 90%;
+    max-width: 1200px;
+    height: 80vh;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+/* Spotify Player (Left Side) */
+.spotify-player {
+    flex: 1;
+    background-color: #222;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    border-right: 2px solid #ff007f;
+}
+.spotify-container {
+    width: 90%;
+    max-width: 400px;
+    background: #222;
+    padding: 20px;
+    border-radius: 10px;
+    color: white;
+    text-align: center;
+    margin: auto;
+    box-shadow: 0px 4px 10px rgba(255, 255, 255, 0.1);
+}
+
+h2 {
+    font-size: 20px;
+    margin-bottom: 10px;
+    color: #1DB954;
+}
+
+.search-bar {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
+#spotify-search {
+    width: 70%;
+    padding: 8px;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+}
+
+button {
+    background: #1DB954;
+    border: none;
+    padding: 8px 15px;
+    color: white;
+    font-size: 14px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+#search-results {
+    margin-top: 10px;
+    text-align: left;
+    max-height: 150px;
+    overflow-y: auto;
+}
+
+#search-results p {
+    padding: 8px;
+    background: #333;
+    margin: 5px 0;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+#search-results p:hover {
+    background: #1DB954;
+}
+
+#spotify-frame {
+    margin-top: 10px;
+    border-radius: 10px;
+}
+
+/* Motion Tracking Area (Right Side) */
+.motion-area {
+    flex: 2;
+    background-color: #111;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+video {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.3;
+}
+
+canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+

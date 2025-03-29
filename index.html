@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jhoom - Music & Motion</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+        <!-- Stylish Heading -->
+        <header class="jhoom-header"><center>
+            <h1>🎵 Jhoom - <span> Music & Motion Tracking</span>🎵</h1>
+        </center>
+        <!-- 🎚️ Equalizer Animation -->
+        <div class="equalizer">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </div></header><br>
+    <div class="container">
+        
+        <!-- Left: Spotify Player -->
+       <div class="spotify-container">
+    <h2>🎵 Search & Play Music</h2>
+
+    <div class="search-bar">
+        <input type="text" id="spotify-search" placeholder="Search for a song...">
+        <button onclick="searchYouTube()">🔍 Search</button>
+    </div>
+
+    <div id="search-results"></div> <!-- Search results appear here -->
+
+    <iframe id="spotify-frame" width="100%" height="80" frameborder="0" allowfullscreen></iframe>
+</div>
+
+        <!-- Right: Motion Tracking Area -->
+        <div class="motion-area" id="motionArea">
+            <video id="video" autoplay playsinline></video>
+            <canvas id="canvas"></canvas>
+        </div>
+    </div>
+
+    <!-- Include MediaPipe for Hand Tracking -->
+    <script src="https://cdn.jsdelivr.net/npm/@mediapipe/hands/hands.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@mediapipe/drawing_utils/drawing_utils.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@mediapipe/camera_utils/camera_utils.js"></script>
+    
+    <!-- JavaScript Files -->
+    <script src="auth.js"></script>
+    <script src="scipt.js"></script>  <!-- ✅ Fixed Typo -->
+</body>
+</html>
